@@ -10,6 +10,8 @@ public class ByteStream {
       fout = new FileOutputStream("t2.txt");
       while((temp = fin.read()) != -1) {
         fout.write((byte)temp);
+        //Displaying On screen
+        System.out.print((byte)temp);
       }
     }
     finally {

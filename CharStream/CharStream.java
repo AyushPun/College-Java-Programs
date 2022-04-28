@@ -1,15 +1,16 @@
 import java.io.*;
 public class CharStream {
   public static void main(String... arg) throws IOException {
-    FileInputStream fin = null;
-    FileOutputStream fout = null;
+    FileReader fin = null;
+    FileWriter fout = null;
 
     try {
       int temp;
-      fin = new FileInputStream("t1.txt");
-      fout = new FileOutputStream("t2.txt");
+      fin = new FileReader("t1.txt");
+      fout = new FileWriter("t2.txt");
       while((temp = fin.read()) != -1) {
         fout.write((char)temp);
+        //Displaying on the screen
        System.out.println((char)temp);   
       }
     }
