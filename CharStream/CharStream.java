@@ -11,12 +11,12 @@ public class CharStream {
       while((temp = fin.read()) != -1) {
         fout.write((char)temp);
         //Displaying on the screen
-       System.out.println((char)temp);   
+       System.out.print((char)temp);   
       }
     }
     finally {
       if(fin != null) {
-        System.out.println("Closing...");
+        System.out.println("\nClosing...");
         fin.close();
       }
       if(fout != null) {
