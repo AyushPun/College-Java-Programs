@@ -5,10 +5,11 @@ public class ByteStream {
     FileOutputStream fout = null;
 
     try {
-      int temp;
+      byte temp;
       fin = new FileInputStream("t1.txt");
       fout = new FileOutputStream("t2.txt");
-      while((temp = fin.read()) != -1) {
+      while(temp != -1) {
+        temp = (byte) fin.read();
         fout.write((byte)temp);
         //Displaying On screen
         System.out.print((byte)temp);
